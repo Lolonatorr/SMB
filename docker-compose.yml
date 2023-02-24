@@ -1,0 +1,17 @@
+services:
+  samba:
+    container_name: ownsmbc
+    image: ownsmb:latest
+    ports:
+      - "445:445"
+      - "139:139"
+    volumes:
+      - /home/elis/m169-fs23-Lolonatorr/docker/ownfileserver/smb.conf:/etc/samba/smb.conf
+      - /home/elis/Pictures:/mnt/Pictures
+    environment:
+      - user_count=2
+      - user1=admin
+      - password1=123
+      - user2=testt
+      - password2=123
+    restart: always
