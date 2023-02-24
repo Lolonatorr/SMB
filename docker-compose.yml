@@ -6,8 +6,8 @@ services:
       - "445:445"
       - "139:139"
     volumes:
-      - /home/SMB/smb.conf:/etc/samba/smb.conf
-      - /home/Pictures:/mnt/Pictures
+      - ./SMB/smb.conf:/etc/samba/smb.conf
+      - ./pictures:/mnt/Pictures
     environment:
       - user_count=2
       - user1=admin
