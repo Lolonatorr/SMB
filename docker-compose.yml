@@ -6,7 +6,7 @@ services:
       - "445:445"
       - "139:139"
     volumes:
-      - ./SMB/smb.conf:/etc/samba/smb.conf
+      - ./smb.conf:/etc/samba/smb.conf
       - ./pictures:/mnt/Pictures
     environment:
       - user_count=2
